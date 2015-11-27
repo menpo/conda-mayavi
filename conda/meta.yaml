@@ -1,0 +1,82 @@
+package:
+  name: mayavi
+  version: "4.4.3"
+
+source:
+  fn: mayavi-4.4.3.tar.bz2
+  url: https://pypi.python.org/packages/source/m/mayavi/mayavi-4.4.3.tar.bz2
+  md5: 38f0940a7d8336ae438aeaa612a592ce
+
+build:
+  preserve_egg_dir: True
+  entry_points:
+    - mayavi2 = mayavi.scripts.mayavi2:main
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - envisage
+    - pyqt
+    - apptools
+    - numpy 1.10
+    - traits
+    - traitsui
+    - vtk 5.*
+
+  run:
+    - python
+    - setuptools
+    - envisage
+    - pyqt
+    - numpy 1.10
+    - apptools
+    - traits
+    - traitsui
+    - vtk 5.*
+
+test:
+  # Python imports
+  imports:
+    - mayavi
+    - mayavi.action
+    - mayavi.components
+    - mayavi.components.ui
+    - mayavi.core
+    - mayavi.core.lut
+    - mayavi.core.ui
+    - mayavi.filters
+    - mayavi.modules
+    - mayavi.modules.ui
+    - mayavi.plugins
+    - mayavi.preferences
+    - mayavi.scripts
+    - mayavi.sources
+    - mayavi.sources.ui
+    - mayavi.tests
+    - mayavi.tools
+    - mayavi.tools.data_wizards
+    - tvtk
+    - tvtk.custom
+    - tvtk.pipeline
+    - tvtk.plugins
+    - tvtk.plugins.browser
+    - tvtk.plugins.scene
+    - tvtk.plugins.scene.ui
+    - tvtk.pyface
+    - tvtk.pyface.ui
+    - tvtk.pyface.ui.null
+    - tvtk.pyface.ui.qt4
+    - tvtk.pyface.ui.wx
+    - tvtk.tests
+    - tvtk.tools
+    - tvtk.util
+    - tvtk.view
+
+  commands:
+    - mayavi2 --help
+
+about:
+  home: http://code.enthought.com/projects/mayavi/
+  license: BSD License
+  summary: 'The Mayavi scientific data 3-dimensional visualizer.'
