@@ -1,9 +1,5 @@
 sudo: false
 
-os:
-- linux
-#- osx  for now our own build bot is much faster
-
 git:
   depth: 200
 
@@ -12,6 +8,8 @@ env:
     - BINSTAR_USER: menpo
   matrix:
     - PYTHON_VERSION: 2.7
+    - PYTHON_VERSION: 3.4
+    - PYTHON_VERSION: 3.5
 
 install:
 - wget https://raw.githubusercontent.com/menpo/condaci/v0.4.x/condaci.py -O condaci.py

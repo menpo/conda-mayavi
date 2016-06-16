@@ -1,11 +1,12 @@
 package:
   name: mayavi
-  version: "4.4.3"
+  version: "4.4.4"
 
 source:
-  fn: mayavi-4.4.3.tar.bz2
-  url: https://pypi.python.org/packages/source/m/mayavi/mayavi-4.4.3.tar.bz2
-  md5: 38f0940a7d8336ae438aeaa612a592ce
+  fn: mayavi-4.4.4.tar.bz2
+  url: https://pypi.python.org/packages/source/m/mayavi/mayavi-4.4.4.tar.bz2
+  md5: 05315d574a873c4316b6dc01973087cf
+
 
 build:
   preserve_egg_dir: True
@@ -19,21 +20,21 @@ requirements:
     - envisage
     - pyqt
     - apptools
-    - numpy >=1.10,<1.11
+    - numpy
     - traits
     - traitsui
-    - vtk 5.*
+    - vtk 6.*
 
   run:
     - python
     - setuptools
     - envisage
     - pyqt
-    - numpy >=1.10,<1.11
+    - numpy
     - apptools
     - traits
     - traitsui
-    - vtk 5.*
+    - vtk 6.*
 
 test:
   # Python imports
