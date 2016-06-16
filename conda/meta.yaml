@@ -23,7 +23,7 @@ requirements:
     - numpy
     - traits
     - traitsui
-    - vtk 6.*
+    - vtk 7.*
 
   run:
     - python
@@ -34,7 +34,7 @@ requirements:
     - apptools
     - traits
     - traitsui
-    - vtk 6.*
+    - vtk 7.*
 
 test:
   # Python imports
